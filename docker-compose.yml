@@ -35,28 +35,5 @@ services:
     volumes:
       - ./data:/data/db
 
-  redis:
-    image: redis
-    ports:
-      - "6379:6379"
-    networks:
-      - workers
-
-  # sidekiq:
-  #   build:
-  #     context: .
-  #     args:
-  #       - environment=development
-  #     dockerfile: ./devops/docker/Dockerfile
-  #   command: bundle exec sidekiq -r ./boot.rb  -C config/sidekiq.yml
-  #   volumes:
-  #     - .:/app
-  #   depends_on:
-  #     - mongodb
-  #     - redis
-  #   networks:
-  #     - workers
-
 networks:
   mongo:
-  workers:

@@ -1,9 +1,6 @@
 # boot.rb
 
 require 'sinatra'
-require 'sidekiq'
-require 'sidekiq/web'
-require 'sidekiq-scheduler/web'
 require 'zeitwerk'
 require 'mongoid'
 require 'nokogiri'
