@@ -1,5 +1,4 @@
 # docker-compose file for a sinatra application with monogdb
-# and sidekiq
 
 version: "3.1"
 
