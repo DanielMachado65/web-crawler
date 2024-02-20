@@ -1,7 +1,5 @@
 # LessonWriteJob
 class LessonJob
-  include Sidekiq::Worker
-
   def perform(content_lesson)
     content_lesson = JSON.parse(content_lesson, symbolize_names: true)
     lesson_insert = insert_lesson(content_lesson)
