@@ -1,0 +1,10 @@
+# :verbose: true
+:concurrency: 5
+:queue:
+  - default
+:scheduler:
+  schedule:
+    sunday_night_task: # Consider renaming this task as it's no longer on Sunday night
+      cron: "0 22 * * 1" # 0 minute, 22 hour, every day of month, every month, on Monday
+      class: "ExtractorAsyncJob"
+      queue: 'default'
