@@ -26,8 +26,6 @@ gem 'zeitwerk'
 
 # cron
 gem 'redis'
-gem 'sidekiq'
-gem 'sidekiq-scheduler'
 
 group :test, :development do
   gem 'pry'
